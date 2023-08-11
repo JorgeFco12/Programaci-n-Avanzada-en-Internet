@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Canvas Angulo Flores</title>
+
+</head>
+<style>
+    #mycanvas{
+        width: 50%;
+        height: 75%;
+        border: 1px solid black;
+    }
+</style>
+
+<body style="background-color:#e9e9e9;">
+
+    <canvas id="mycanvas"> </canvas>
+
+</body>
+
+<script>
+
+    var canvas = document.getElementById('mycanvas'); 
+    var ctx = canvas.getContext('2d');
+    
+    ctx.fillStyle = "rgb(85,100,235)";
+    ctx.fillRect (10, 10, 50, 50);
+     
+    ctx.fillStyle = "rgb(230,25,25)";
+    ctx.fillRect (50, 50, 50, 50);
+
+    ctx.fillStyle = "rgba(255, 0, 128, 0.5)";
+    ctx.fillRect (90, 88, 50, 50);
+ 
+</script>
+
+</html>
