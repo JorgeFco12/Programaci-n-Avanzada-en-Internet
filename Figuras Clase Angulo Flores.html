@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Canvas Angulo Flores</title>
+
+</head>
+<style>
+    #mycanvas{
+        width: 80%;
+        height: 100%;
+        border: 1px solid black;
+    }
+</style>
+
+<body style="background-color:#e9e9e9;">
+
+    <canvas id="mycanvas"> </canvas>
+
+</body>
+
+<script>
+
+    var canvas = document.getElementById('mycanvas'); 
+    var ctx = canvas.getContext('2d');
+    
+    ctx.fillStyle = "rgb(85,100,235)";
+    ctx.fillRect (10, 10, 50, 50);
+     
+    ctx.fillStyle = "rgb(230,25,25)";
+    ctx.fillRect (50, 50, 50, 50);
+
+    ctx.fillStyle = "rgba(255, 0, 128, 0.5)";
+    ctx.fillRect (90, 88, 50, 50);
+    //(x,y,ancho.alto)
+
+    //ctx.StrokeStyle="red";
+    ctx.beginPath();//TRIANGULO
+        ctx.moveTo(185, 10); //primerpunto derecha y abajo
+        ctx.lineTo(185, 65);
+        ctx.lineTo(125, 65);
+        ctx.fill();
+    ctx.closePath();
+
+    
+    ctx.beginPath();//LINEA
+        ctx.strokeStyle="red";
+        ctx.moveTo(185, 65);
+        ctx.lineTo(205, 105);
+        ctx.stroke();
+    ctx.closePath();
+
+
+    ctx.beginPath();//CIRCULO 1
+        ctx.fillStyle="green";
+        ctx.arc(250, 40, 25, 0, 2*Math.PI); //derecha abjo grande
+        ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();//CIRCULO 2
+        ctx.strokeStyle="red";
+        ctx.arc(250, 100, 25, 0, 2*Math.PI); //derecha abjo grande
+        ctx.stroke();
+    ctx.closePath();
+
+</script>
+
+</html>
