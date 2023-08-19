@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>2do Canva Angulo Flores</title>
+
+</head>
+<style>
+    #mycanvas{
+        width: 60%;
+        height: 120%;
+        border: 1px solid black;
+        background-color: grey;
+    }
+</style>
+
+<body style="background-color:white;">
+    
+    <canvas id="mycanvas"> </canvas>
+    <img id="img" src="gato2.png" style="display: none;">
+
+</body>
+
+<script>
+
+    var canvas = document.getElementById('mycanvas'); 
+    var ctx = canvas.getContext('2d');
+
+    ctx.beginPath();
+        ctx.fillStyle = "white";
+        ctx.font = "20px Georgia";
+        ctx.fillText("Hola Jorge!", 10, 40);
+        
+        ctx.stroke = "black";
+        ctx.font = "20px Georgia";
+        ctx.strokeText("Hola Jorge!", 12, 42);
+    ctx.closePath();
+
+    ctx.beginPath();
+        const grd = ctx.createLinearGradient(20, 5, 0, 20);
+        grd.addColorStop(0, "pink");
+        grd.addColorStop(.5, "yellow");
+        grd.addColorStop(1, "green");
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(15, 60, 100, 50); //DERECHA, ABAJO ,ANCHO, ALTO
+    ctx.closePath();
+
+    ctx.beginPath();
+        const grd2 = ctx.createRadialGradient(170,80,1,215,110,60); // X,Y,
+        grd2.addColorStop(0, "red");
+        grd2.addColorStop(0.4, "yellow");
+
+        ctx.fillStyle = grd2;
+        ctx.fillRect(130, 60, 100, 50);
+    ctx.closePath();
+
+    ctx.beginPath();
+        var myImage = document.getElementById("img");
+        ctx.drawImage(myImage , 150 , 5, 100, 50);
+    ctx.closePath();
+
+</script>
+
+</html>
