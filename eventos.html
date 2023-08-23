@@ -31,7 +31,7 @@
         var figura = true;
         ctx.fillStyle=color;
 
-        canvas.addEventListener("click",(event)=> {
+        /*canvas.addEventListener("click",(event)=> {
 
             if(figura){
             ctx.beginPath();
@@ -44,7 +44,7 @@
                 ctx.fillRect(event.layerX-50, event.layerY-50, 50, 50 );
                 ctx.strokeRect(event.layerX-50, event.layerY-50, 50,50);
             }
-        })
+        })*/
 
         canvas.addEventListener("mouseover",(event)=> {
             color = random_rgba();
@@ -64,18 +64,35 @@
         })
 
 
+        var presionando = false; //Validacion para evento de presionar mouse
+
         canvas.addEventListener("mousemove",(event)=> {
-            console.log("move");
-            ctx.beginPath();
-                ctx.arc(event.layerX, event.layerY, 2, 0, 2*Math.PI); 
-                ctx.fill();
-                ctx.stroke();
-            ctx.closePath();
+            if(presionando){
+                ctx.beginPath();
+                    ctx.arc(event.layerX, event.layerY, 2, 0, 2*Math.PI); 
+                    ctx.fill();
+                    ctx.stroke();
+                ctx.closePath();
+            }
         })
 
+        canvas.addEventListener("mousedown",(event)=> {
+            presionando = true;
+            if(figura){
+                ctx.beginPath();
+                ctx.arc(event.layerX, event.layerY, 40, 0, 2*Math.PI); 
+                ctx.fill();
+                ctx.stroke();
+                ctx.closePath();
+            }else{
+                ctx.fillRect(event.layerX-50, event.layerY-50, 50, 50 );
+                ctx.strokeRect(event.layerX-50, event.layerY-50, 50,50);
+            }
+        });
 
-
-
+        canvas.addEventListener("mouseup",(event)=> {
+            presionando = false;
+        });
 
         //onclick = (event) => {};
 
