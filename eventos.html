@@ -36,8 +36,27 @@
 
         document.addEventListener("keydown",(event)=> {
 
-            x=getRandomInt();
-            y=getRandomInt();
+            switch (event.keyCode) {
+            case 87: //W 
+                y -= 15;
+                break;
+            
+            case 65: //A 
+                x -= 15;
+                break;
+
+            case 83: //S 
+                y += 15;
+                break;
+
+            case 68: //D
+                x += 15;
+                break;
+
+            default:
+                break;
+        }     
+            
 
             ctx.beginPath()
             ctx.fillStyle = random_rgba();
