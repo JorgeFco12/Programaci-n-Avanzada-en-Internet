@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>2do Canva Angulo Flores</title>
+</head>
+<style>
+    #mycanvas{
+        border: 1px solid black;
+        background-color: #71a0c5;
+    }
+</style>
+
+<body style="background-color:white;">
+    
+   <center><canvas id="mycanvas" width="500" height="500"> </canvas></center>
+    
+</body>
+
+<script>
+    var canvas = document.getElementById('mycanvas'); 
+    var ctx = canvas.getContext('2d');
+
+    // Brazo Izquierdo
+    ctx.beginPath();
+        ctx.arc(150, 315, 70, 0.5 * Math.PI, 1.5 * Math.PI);
+        ctx.fillStyle = '#808080'; // Cambiado a gris
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Brazo Derecho
+    ctx.beginPath();
+        ctx.arc(350, 315, 70, 1.5 * Math.PI, 0.5 * Math.PI);
+        ctx.fillStyle = '#808080'; // Cambiado a gris
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Orejas 
+    ctx.beginPath();
+        ctx.moveTo(180, 30);
+        ctx.lineTo(160, 120);
+        ctx.lineTo(220, 120);
+        ctx.fillStyle = '#808080'; // Cambiado a gris
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Orejas del lado derecho
+    ctx.beginPath();
+        ctx.moveTo(320, 30);
+        ctx.lineTo(345, 120);
+        ctx.lineTo(290, 120);
+        ctx.fillStyle = '#808080'; // Cambiado a gris
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Cuerpo Principal
+    ctx.beginPath();
+        ctx.ellipse(250, 260, 140, 200, 0, 0, 2 * Math.PI); 
+        ctx.fillStyle = '#808080'; 
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Panza
+    ctx.beginPath();
+        ctx.ellipse(250, 340, 110, 110, 0, 0, 2 * Math.PI); 
+        ctx.fillStyle = '#eeda9e'; 
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Ojos
+    ctx.beginPath();
+        ctx.arc(190, 150, 17, 0, Math.PI * 2);
+        ctx.arc(310, 150, 17, 0, Math.PI * 2);
+        ctx.fillStyle = 'white'; 
+        ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.arc(190, 150, 10, 0, Math.PI * 2);
+        ctx.arc(310, 150, 10, 0, Math.PI * 2);
+        ctx.fillStyle = '#000000'; 
+        ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.arc(185, 144, 3, 0, Math.PI * 2);
+        ctx.arc(305, 144, 3, 0, Math.PI * 2);
+        ctx.fillStyle = 'white'; 
+        ctx.fill();
+    ctx.closePath();
+    
+    // Nariz 
+    ctx.beginPath();
+        ctx.moveTo(250, 195); 
+        ctx.lineTo(220, 175); 
+        ctx.lineTo(280, 175); 
+        ctx.fillStyle = '#000000'; 
+        ctx.fill();
+    ctx.closePath();
+
+    // Boca
+    ctx.beginPath();
+        ctx.moveTo(245, 212);
+        ctx.lineTo(255, 210); 
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Bigotes
+    ctx.beginPath();
+        ctx.moveTo(160, 185); 
+        ctx.lineTo(80, 160);
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.moveTo(160, 200); 
+        ctx.lineTo(50, 195);
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.moveTo(160, 215); 
+        ctx.lineTo(20, 220);
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Bigotes del lado contrario
+    ctx.beginPath();
+        ctx.moveTo(340, 185); 
+        ctx.lineTo(420, 160);
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.moveTo(340, 200); 
+        ctx.lineTo(450, 195);
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.moveTo(340, 215); 
+        ctx.lineTo(480, 220);
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Uñas
+    ctx.fillStyle = 'white';
+    // Primera uña izquierda
+    ctx.fillRect(178, 445, 10, 10);
+    ctx.strokeStyle = '#000000'; 
+    ctx.strokeRect(178, 445, 10, 10);
+
+    // Segunda uña izquierda
+    ctx.fillRect(189, 448, 10, 10);
+    ctx.strokeStyle = '#000000'; 
+    ctx.strokeRect(189, 448, 10, 10);
+
+    // Tercera uña izquierda 
+    ctx.beginPath();
+        ctx.moveTo(200, 462);
+        ctx.lineTo(225, 457);
+        ctx.lineTo(200, 450);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+    ctx.strokeStyle = '#000000'; 
+
+    // Tercera uña izquierda 
+    ctx.beginPath();
+        ctx.moveTo(200, 462);
+        ctx.lineTo(225, 457);
+        ctx.lineTo(200, 450);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Uñas del lado derecho
+    ctx.fillStyle = 'white';
+    // Primera uña derecha
+    ctx.fillRect(310, 445, 10, 10);
+    ctx.strokeStyle = '#000000';
+    ctx.strokeRect(310, 445, 10, 10);
+
+    // Segunda uña derecha
+    ctx.fillRect(300, 448, 10, 10);
+    ctx.strokeStyle = '#000000'; 
+    ctx.strokeRect(300, 448, 10, 10);
+
+    // Tercera uña derecha 
+    ctx.beginPath();
+        ctx.moveTo(300, 462);
+        ctx.lineTo(275, 457);
+        ctx.lineTo(300, 450);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+     //uñas mano izquierda
+     ctx.beginPath();
+        ctx.moveTo(115, 374);
+        ctx.lineTo(140, 401);
+        ctx.lineTo(130, 384);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.moveTo(125, 378);
+        ctx.lineTo(150, 405);
+        ctx.lineTo(140, 388);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Uñas mano derecha 
+    ctx.beginPath();
+        ctx.moveTo(385, 375);
+        ctx.lineTo(360, 402);
+        ctx.lineTo(370, 385);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.moveTo(375, 379);
+        ctx.lineTo(350, 406);
+        ctx.lineTo(360, 389);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    /// Triángulos en la parte superior de la panza
+    ctx.fillStyle = '#808080'; 
+
+    // Primer triángulo 
+    ctx.beginPath();
+        ctx.moveTo(200, 250); 
+        ctx.lineTo(180, 280);
+        ctx.lineTo(220, 280); 
+        ctx.fill();
+    ctx.closePath();
+
+    // Segundo triángulo 
+    ctx.beginPath();
+        ctx.moveTo(250, 250); 
+        ctx.lineTo(230, 280); 
+        ctx.lineTo(270, 280); 
+        ctx.fill();
+    ctx.closePath();
+
+    // Tercer triángulo 
+    ctx.beginPath();
+        ctx.moveTo(300, 250); 
+        ctx.lineTo(280, 280); 
+        ctx.lineTo(320, 280);
+        ctx.fill();
+    ctx.closePath();
+
+    // Triángulos en la parte inferior de la panza
+    ctx.fillStyle = '#808080'; 
+
+    // Primer triángulo 
+    ctx.beginPath();
+        ctx.moveTo(175, 305); 
+        ctx.lineTo(160, 330); 
+        ctx.lineTo(190, 330); 
+        ctx.fill();
+    ctx.closePath();
+
+    // Segundo triángulo
+    ctx.beginPath();
+        ctx.moveTo(225, 305); 
+        ctx.lineTo(210, 330); 
+        ctx.lineTo(240, 330); 
+        ctx.fill();
+    ctx.closePath();
+
+    // Tercer triángulo 
+    ctx.beginPath();
+        ctx.moveTo(275, 305); 
+        ctx.lineTo(260, 330); 
+        ctx.lineTo(290, 330);
+        ctx.fill();
+    ctx.closePath();
+
+    // Cuarto triángulo 
+    ctx.beginPath();
+        ctx.moveTo(325, 305);
+        ctx.lineTo(310, 330); 
+        ctx.lineTo(340, 330); 
+        ctx.fill();
+    ctx.closePath();
+
+</script>
+
+</html>
