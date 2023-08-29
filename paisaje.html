@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Paisaje Angulo Flores</title>
+</head>
+<style>
+    #mycanvas{
+        border: 1px solid black;
+       
+    }
+</style>
+
+<body style="background-color:white;">
+    
+   <center><canvas id="mycanvas" width="500" height="500"> </canvas></center>
+    
+</body>
+
+<script>
+
+    var canvas = document.getElementById('mycanvas');
+    var ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#4c2882'; //fondo del canvas
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Panza
+    ctx.beginPath();
+        ctx.ellipse(250, 220, 60, 20, 100, 0, 2 * Math.PI); 
+        ctx.fillStyle = 'black'; 
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+       //ctx.stroke();
+    ctx.closePath();
+
+    //Cabeza
+    ctx.beginPath();
+        ctx.ellipse(312, 190, 30, 15, 85, 0, 2 * Math.PI); 
+        ctx.fillStyle = 'black'; 
+        ctx.fill();
+        ctx.strokeStyle = '#000000'; 
+        //ctx.stroke();
+    ctx.closePath();
+
+     // Pata Izquierda
+    ctx.beginPath();
+        ctx.moveTo(220, 250); 
+        ctx.lineTo(250, 300);
+        ctx.strokeStyle = 'black'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Pata Derecha
+    ctx.beginPath();
+        ctx.moveTo(235, 235); 
+        ctx.lineTo(275, 290);
+        
+        ctx.strokeStyle = 'black'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    // Cola
+    ctx.beginPath();
+        ctx.moveTo(210, 230); 
+        ctx.lineTo(150, 260); 
+        ctx.lineTo(175, 275); 
+        ctx.lineTo(220, 245); 
+        ctx.fillStyle = 'black';
+        ctx.fill();
+    ctx.closePath();
+
+    //Pico
+    ctx.beginPath();
+        ctx.moveTo(340, 193); 
+        ctx.lineTo(360, 210); 
+        ctx.lineTo(336, 203);
+        ctx.closePath();
+
+        ctx.fillStyle = 'black';
+        ctx.fill();
+    ctx.closePath();
+
+    // Sol
+    ctx.beginPath();
+        ctx.arc(0, 0, 100, 0, Math.PI / 2); 
+        ctx.lineTo(0, 0); 
+        ctx.fillStyle = 'yellow';
+        ctx.fill();
+        ctx.strokeStyle = 'red';
+        ctx.stroke();
+    ctx.closePath();
+
+    // Palo Flor
+    ctx.beginPath();
+        ctx.moveTo(400, 400); 
+        ctx.lineTo(400, 500);
+        ctx.strokeStyle = '#3cb371'; 
+        ctx.stroke();
+    ctx.closePath();
+
+    //Base flor
+    ctx.beginPath();
+        ctx.ellipse(400, 410, 25, 4, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#00000';
+        ctx.fill();
+    ctx.closePath();
+
+    //Petalos
+    ctx.beginPath();
+        ctx.ellipse(400, 402, 20, 6, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#CF3476';
+        ctx.fill();
+
+        ctx.ellipse(412, 410, 20, 6, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#CF3476';
+        ctx.fill();
+
+        ctx.ellipse(402, 402, 20, 6, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#CF3476';
+        ctx.fill();
+
+        ctx.ellipse(412, 418, 20, 6, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#CF3476';
+        ctx.fill();
+
+        ctx.ellipse(390, 418, 20, 6, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#CF3476';
+        ctx.fill();
+
+        ctx.ellipse(390, 409, 20, 6, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#CF3476';
+        ctx.fill();
+    ctx.closePath();
+
+// Rayos solares
+    ctx.beginPath();
+        ctx.moveTo(110, 20); 
+        ctx.lineTo(170, 20); 
+        ctx.strokeStyle = 'yellow';
+        ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.moveTo(110, 55); 
+        ctx.lineTo(170, 85); 
+        ctx.strokeStyle = 'yellow';
+        ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.moveTo(90, 90); 
+        ctx.lineTo(140, 125); 
+        ctx.strokeStyle = 'yellow';
+        ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+        ctx.moveTo(50, 110); 
+        ctx.lineTo(80, 150); 
+        ctx.strokeStyle = 'yellow';
+        ctx.stroke();
+    ctx.closePath();    
+
+    ctx.beginPath();
+        ctx.moveTo(20, 120); 
+        ctx.lineTo(20, 150); 
+        ctx.strokeStyle = 'yellow';
+        ctx.stroke();
+    ctx.closePath();   
+
+    //Pasto
+    ctx.beginPath();
+        ctx.ellipse(490, 490, 300, 30, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#2e8b57';
+        ctx.fill();
+        ctx.strokeStyle = '#2c6846';
+        ctx.stroke();
+    ctx.closePath();
+
+
+    //Lago
+    ctx.beginPath();
+        ctx.ellipse(-10, 500, 300, 30, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#1a7486';
+        ctx.fill();
+        ctx.strokeStyle = '#025669';
+        ctx.stroke();
+    ctx.closePath();
+
+    // Ala Izquierda
+    ctx.beginPath();
+    ctx.moveTo(260, 200); 
+    ctx.lineTo(200, 170); 
+    ctx.lineTo(220, 220); 
+    ctx.closePath();
+    ctx.fillStyle = 'black';
+    ctx.fill();
+
+     // Ala Derecha
+     ctx.beginPath();
+    ctx.moveTo(260, 200); 
+    ctx.lineTo(230, 170); 
+    ctx.lineTo(220, 220); 
+    ctx.closePath();
+    ctx.fillStyle = 'black';
+    ctx.fill();
+
+
+</script>
+</html>
