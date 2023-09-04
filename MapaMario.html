@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mapa MarioBros Angulo Flores</title>
+</head>
+<style>
+    #mycanvas{
+        border: 1px solid black;
+        background-color: #AFEEEE;
+    }
+</style>
+
+<body style="background-color:white;">
+    
+   <center><canvas id="mycanvas" width="900" height="500"> </canvas></center>
+    
+</body>
+
+<script>
+    var canvas = document.getElementById('mycanvas'); 
+    var ctx = canvas.getContext('2d');
+
+    function dibujarCuadrado(x, y, width, height, fillColor) {
+        ctx.fillStyle = fillColor;
+        ctx.fillRect(x, y, width, height); 
+    }
+
+    function dibujarCirculo(x, y, radius, fillColor) {
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.fillStyle = fillColor;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+
+
+    //CUADRADO AZUL
+    dibujarCuadrado(265, 230, 140, 200, "Black"); 
+    dibujarCuadrado(225, 185, 160, 330, "BLACK"); 
+    dibujarCuadrado(230, 190, 150, 320, "#1E90FF"); 
+    dibujarCuadrado(230, 190, 144, 215, "#87CEEB"); 
+
+
+    //Cuadrado DURAZNO?
+    dibujarCuadrado(160, 320, 150, 100, "black"); 
+    dibujarCuadrado(140, 260, 155, 155, "Black"); 
+    dibujarCuadrado(145, 265, 145, 145, "#FFA07A"); 
+    dibujarCuadrado(145, 265, 140, 140, "#FFDAB9"); 
+    
+    
+    //Cuadrado VERDE
+    dibujarCuadrado(750, 260, 155, 155, "Black"); 
+    dibujarCuadrado(755, 265, 145, 145, "#00FF7F"); 
+    dibujarCuadrado(757, 405, 132, 8, "#228B22"); 
+
+    
+    //TUBERIA INFERIOR
+    dibujarCuadrado(475, 295, 108, 115, "BLACK"); 
+    dibujarCuadrado(478, 300, 102, 108, "#006400"); 
+
+    //TUBERIA SUPERIOR
+    dibujarCuadrado(464, 250, 130, 45, "BLACK"); 
+    dibujarCuadrado(469, 255, 120, 35, "#006400"); 
+   
+    //sombreados arribas
+    dibujarCuadrado(469, 255, 26, 35, "#FFDAB9"); 
+    dibujarCuadrado(495, 255, 32, 35, "#008000"); 
+    dibujarCuadrado(527, 255, 13, 35, "#228B22"); 
+
+    //sombreados abajo
+    dibujarCuadrado(478, 300, 18, 108, "#FFDAB9"); 
+    dibujarCuadrado(496, 300, 30, 108, "#008000"); 
+    dibujarCuadrado(526, 300, 13, 108, "#228B22"); 
+    
+    //Cuadro monedas
+
+    //moneda1
+    dibujarCuadrado(50, 190, 50, 50, "Black"); 
+    dibujarCuadrado(53, 193, 44, 44, "#FFA07A"); 
+
+    //moneda2
+    dibujarCuadrado(125, 50, 50, 50, "Black"); 
+    dibujarCuadrado(128, 53, 44, 44, "#FFA07A");
+
+    //moneda3
+    dibujarCuadrado(175, 50, 50, 50, "Black"); 
+    dibujarCuadrado(178, 53, 44, 44, "#FFA07A");
+
+    //moneda4
+    dibujarCuadrado(705, 80, 50, 50, "Black"); 
+    dibujarCuadrado(708, 83, 44, 44, "#FFA07A");
+
+    // ARBUSTO
+
+    dibujarCirculo(60, 390, 32, "BLACK"); 
+    dibujarCirculo(80, 390, 32, "BLACK"); 
+    dibujarCirculo(70, 370, 29, "BLACK"); 
+
+    dibujarCirculo(60, 390, 28, "#228B22");
+    dibujarCirculo(80, 390, 28, "#228B22"); 
+    dibujarCirculo(70, 370, 25, "#228B22"); 
+
+
+    //TORNILLOS
+    dibujarCirculo(58, 198, 3, "BLACK"); 
+    dibujarCirculo(58, 232, 3, "BLACK"); 
+    dibujarCirculo(91, 198, 3, "BLACK"); 
+    dibujarCirculo(91, 232, 3, "BLACK"); 
+
+    dibujarCirculo(133, 58, 3, "BLACK"); 
+    dibujarCirculo(133, 92, 3, "BLACK"); 
+    dibujarCirculo(166, 58, 3, "BLACK"); 
+    dibujarCirculo(166, 92, 3, "BLACK"); 
+
+    dibujarCirculo(183, 58, 3, "BLACK"); 
+    dibujarCirculo(183, 92, 3, "BLACK"); 
+    dibujarCirculo(216, 58, 3, "BLACK"); 
+    dibujarCirculo(216, 92, 3, "BLACK"); 
+
+    dibujarCirculo(713, 88, 3, "BLACK"); 
+    dibujarCirculo(713, 122, 3, "BLACK"); 
+    dibujarCirculo(746, 88, 3, "BLACK"); 
+    dibujarCirculo(746, 122, 3, "BLACK"); 
+
+    dibujarCirculo(713, 88, 3, "BLACK"); 
+    dibujarCirculo(713, 122, 3, "BLACK"); 
+    dibujarCirculo(746, 88, 3, "BLACK"); 
+    dibujarCirculo(746, 122, 3, "BLACK"); 
+
+    dibujarCirculo(244, 202, 8, "#708090"); 
+    dibujarCirculo(360, 202, 8, "#708090"); 
+    dibujarCirculo(360, 390, 8, "#708090"); 
+
+    dibujarCirculo(158, 277, 8, "#708090"); 
+    dibujarCirculo(270, 277, 8, "#708090"); 
+    dibujarCirculo(158, 390, 8, "#708090"); 
+    dibujarCirculo(270, 390, 8, "#708090");
+
+    dibujarCirculo(767, 277, 8, "#708090"); 
+    dibujarCirculo(767, 390, 8, "#708090"); 
+    
+
+    //PISO
+     dibujarCuadrado(0, 410, canvas.width, 90, "#FFA07A");
+     dibujarCuadrado(0, 440, canvas.width, 70, "#FF7F50"); 
+
+     
+</script>
+
+</html>
