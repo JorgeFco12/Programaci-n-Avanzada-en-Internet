@@ -7,8 +7,9 @@
 </head>
 
 <body style="background-color: gray;">
-<center><canvas id="canvas01" width = "500" height = "500"></center>
-</canvas>
+    <center>
+        <canvas id="canvas01" width="500" height="500"></canvas>
+    </center>
 
 </body>
 
@@ -22,6 +23,12 @@
     
     var dir=0;
     var speed=10;
+    let pause = false;
+    let score=0;
+    let image= new Image();
+    image.src="pikachu5.png";
+    let audio = new Audio();
+    audio.src="op.mp3";
 
     class Rectangulo{
 
@@ -66,24 +73,28 @@
         
             switch (event.keyCode) {
             case 87:
-                dir = event.keyCode;
+                if(!pause)dir = event.keyCode;
+                
                 
                 break;
 
             case 83:
-                dir = event.keyCode;
+            if(!pause)dir = event.keyCode;
                
                 break;
 
             case 68:
-                dir = event.keyCode;
+            if(!pause)dir = event.keyCode;
                 
                 break;
 
-                case 65:
-                dir = event.keyCode;
-            
+            case 65:
+            if(!pause)dir = event.keyCode;
                 break;
+
+            case 32:
+                pause = !pause;
+                break;dsad
 
             default:
                 break;
@@ -92,7 +103,8 @@
 
 
     function update(){
-        switch (dir) {
+        if(!pause){
+            switch (dir) {
             case 87:  
                
                 player.y-= speed;
@@ -122,13 +134,16 @@
                 break;
 
             default:
+                
                 break;
             }
 
             if(player.seTocan(target)){
                 target.x= Math.random() * (400);
                 target.y= Math.random() * (400);
-                speed +=2;
+                speed +=1;
+                score +=10;
+                audio.play();
             };
 
 
@@ -164,24 +179,39 @@
             }
         };
            
-
+    }
         repaint();
         window.requestAnimationFrame(update);
+        
+        
     }
 
     function repaint(){
-        
-        ctx.fillStyle = "white";
-        ctx.fillRect ( 0, 0,1000,1000);
+        if(!pause){
+            ctx.fillStyle = "white";
+            ctx.fillRect ( 0, 0,1000,1000);
 
-        player.c = random_rgba();
-        player.paint(ctx);
+            //player.c = random_rgba();
+            //player.paint(ctx);
+            ctx.drawImage(image, player.x, player.y,50,50)
 
-        target.paint(ctx);
+            target.paint(ctx);
 
-        for(var i = walls.length -1; i>=0;i--){
-            walls[i].paint(ctx);
-        };
+            ctx.fillStyle = "BLACK";
+            ctx.font ="30px Arial"
+            ctx.fillText("Score: "+score,40,30);
+
+            for(var i = walls.length -1; i>=0;i--){
+                walls[i].paint(ctx);
+             };
+        }else{
+            ctx.fillStyle = "RGB(128,128,128,.05)";
+            ctx.fillRect ( 0, 0,1000,1000);
+            ctx.fillStyle = "BLACK";
+            ctx.font ="30px Arial"
+            ctx.fillText("P A U S E",190,230);
+        }
+       
        
     }
 
